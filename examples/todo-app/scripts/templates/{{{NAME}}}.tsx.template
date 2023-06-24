@@ -1,0 +1,15 @@
+// TODO: FIX THIS
+type Props = {
+  template: string;
+};
+
+/**
+ * {{{NAME}}}
+ * @description {{{NAME}}} component
+ * @param {Props} props
+ */
+export function {{{NAME}}}({ template }: Props) {
+  return <div>{template}</div>;
+}
+
+export default {{{NAME}}};

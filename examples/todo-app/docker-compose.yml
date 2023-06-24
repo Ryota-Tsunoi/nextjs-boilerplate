@@ -1,0 +1,9 @@
+version: '2'
+services:
+  next-app:
+    image: next-app
+    build: .
+    volumes:
+      - './next-app:/var/next-app'
+    ports:
+      - '5300:3000'
