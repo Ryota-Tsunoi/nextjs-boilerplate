@@ -1,0 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import type { Meta, StoryObj } from '@storybook/react';
+import { {{{NAME}}} } from './{{{NAME}}}';
+
+export default {
+  component: {{{NAME}}},
+  title: '{{{PATH}}}{{{NAME}}}',
+  args: {
+    template: '{{{NAME}}}',
+  },
+  render: (args) => <{{{NAME}}} {...args} />,
+} as Meta<typeof {{{NAME}}}>;
+
+export const Default: StoryObj<typeof {{{NAME}}}> = {};

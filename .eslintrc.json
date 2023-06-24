@@ -1,3 +1,53 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
+  "rules": {
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "react/jsx-props-no-spreading": "off",
+    "max-depth": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.config.js", "*.config.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "allowTemplateLiterals": true
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_"
+          }
+        ]
+      }
+    }
+  ],
+  "env": {
+    "jest": true
+  }
 }

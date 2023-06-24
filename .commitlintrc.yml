@@ -1,0 +1,3 @@
+# See https://github.com/conventional-changelog/commitlint#getting-started
+extends:
+  - '@commitlint/config-conventional'
